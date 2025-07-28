@@ -29,7 +29,7 @@ depositeForm.addEventListener("submit", function (e) {
 
     // ✅ Validation
     if (!userNameE1 || !accountNumberE1 || !ifscCodeE1 || !amountE1) {
-        alert("❌ All fields are required!");
+        showAlert("❌ All fields are required!");
         return;
     }
 
@@ -53,7 +53,7 @@ depositeForm.addEventListener("submit", function (e) {
     updateBalance(amountE1);
 
     // ✅ Show success
-    alert("Deposit is successful ✅");
+    showAlert("Deposit is successful ✅");
 
     // ✅ Reset form
     depositeForm.reset();
@@ -72,17 +72,17 @@ transferForm.addEventListener("submit", function (e) {
     const transferAmount = Number(document.getElementById("transferAmount").value.trim());
 
     if (!senderAccount || !receiverAccount || !receiverIFSC || !transferAmount) {
-        alert("❌ All fields are required!");
+        showAlert("❌ All fields are required!");
         return; // Validation fail hone par baaki code execute na ho
     }
     if (transferAmount > accountBalance) {
-        alert("❌ Insufficient Balance!");
+        showAlert("❌ Insufficient Balance!");
         return;
     }
 
     accountBalance -= transferAmount;
 
-    alert(`✅ ₹${transferAmount} transferred successfully!`);
+    showAlert(`✅ ₹${transferAmount} transferred successfully!`);
 
     const historyCard = document.createElement("div");
     historyCard.classList.add("card");
@@ -101,7 +101,7 @@ transferForm.addEventListener("submit", function (e) {
     // ✅ Show receipt
     showDisplay.innerHTML = historyCard.innerHTML;
 
-    // alert("Transfer is successful ✅");
+    // showAlert("Transfer is successful ✅");
     transferForm.reset(); // Form reset after successful transfer
 });
 
@@ -114,6 +114,16 @@ function back() {
     showRecipt.style.display = "none";
 }
 
+
+
+function showAlert(msg) {
+    document.getElementById("alertMsg").innerText = msg;
+    document.getElementById("customAlert").classList.remove("hidden");
+}
+
+function hideAlert() {
+    document.getElementById("customAlert").classList.add("hidden");
+}
 
 
 

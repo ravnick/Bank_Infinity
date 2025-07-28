@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bank Account</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
 </head>
 
 <body>
@@ -118,21 +120,21 @@
                         <tr>
                             <td><label for="senderAccount">Sender A/C Number:</label></td>
                             <td><input type="number" name="senderAcc" id="senderAccount"
-                                    placeholder="Enter your account number" title="Sender A/C number"></td>
+                                    placeholder=" your account number" title="Sender A/C number"></td>
                         </tr>
                         <tr>
                             <td><label for="receiverAccount">Receiver A/C Number:</label></td>
                             <td><input type="number" name="receiverAcc" id="receiverAccount"
-                                    placeholder="Enter receiver's account number" title="Receiver A/C number"></td>
+                                    placeholder=" receiver's account number" title="Receiver A/C number"></td>
                         </tr>
                         <tr>
                             <td><label for="receiverIFSC">Receiver IFSC Code:</label></td>
-                            <td><input type="text" id="receiverIFSC" placeholder="Enter receiver IFSC code"
+                            <td><input type="text" id="receiverIFSC" placeholder=" receiver IFSC code"
                                     title="Receiver IFSC Code"></td>
                         </tr>
                         <tr>
                             <td><label for="transferAmount">Enter Amount:</label></td>
-                            <td><input type="number" id="transferAmount" placeholder="Enter amount"
+                            <td><input type="number" id="transferAmount" placeholder=" amount"
                                     title="Enter transfer amount"></td>
                         </tr>
                         <tr>
@@ -179,6 +181,12 @@
             <button id="transferBtn">transfer</button>
             <button id="checkBalanceDivBtn">Check Balance</button>
             <button id="historyShowBtn">Show History</button>
+        </div>
+    </div>
+    <div id="customAlert" class="hidden">
+        <div class="alert-box">
+            <p id="alertMsg"></p>
+            <button onclick="hideAlert()">OK</button>
         </div>
     </div>
 

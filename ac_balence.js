@@ -1,6 +1,6 @@
-let accountBalance = 3500; // Example balance
 
-let correctUPIPin = "1234"; // Example correct pin
+const pin = document.getElementById("pin").value.trim();
+let accountBalance = 10000; // Example balance
 
 const pinBoxes = document.querySelectorAll(".pinBox");
 const checkBalanceBtn = document.getElementById("checkBalanceBtn");
@@ -34,6 +34,7 @@ checkBalanceBtn.addEventListener("click", function () {
     // showBalanceDiv.innerHTML =  "";
     pinBoxes[0].focus(); // cursor wapas pehle box me le aao
 });
+
 pinBoxes.forEach((box, index) => {
     box.addEventListener("input", () => {
         if (box.value.length === 1 && index < pinBoxes.length - 1) {
