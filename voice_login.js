@@ -4,7 +4,7 @@ let voices = [];
 window.speechSynthesis.onvoiceschanged = () => {
     voices = window.speechSynthesis.getVoices();
 };
-// let correctUPIPin = "";
+let correctUPIPin = "";
 
 document.getElementById("loginForm").addEventListener("submit", function (e) {
     e.preventDefault();
@@ -17,11 +17,25 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
         showAlert("Please fill all fields correctly");
         return;
     }
-    // correctUPIPin = pin; // ✅ UPI Pin yahin set karo   
+    correctUPIPin = pin; // ✅ UPI Pin yahin set karo
     // Voice Greeting
-    let greet = gender === "female"
+    // gender.toLowerCase()  ✅  IMP   
+    let greet = gender.toLowerCase() === "female"
         ? `Welcome to Infinity Bank, Ms. ${name}`
         : `Welcome to Infinity Bank, Mr. ${name}`;
+    
+    if (name.toLowerCase() === "nikhil" && gender.toLowerCase() === "male" && pin === "1111") {
+        greet = "Hi Nikhil bro how are you? kaisee ho tumm";
+    }
+     if (name.toLowerCase() === "nikhil" && gender.toLowerCase() === "male" && pin === "2222") {
+        greet = "Hi Nikhil bro how are you? kaisi hai anjali bhabhi";
+    }
+     if (name.toLowerCase() === "nikhil" && gender.toLowerCase() === "male" && pin === "3333") {
+        greet = "Hi Nikhil bro how are you? kaisii hai apni web site";
+    }
+     if (name.toLowerCase() === "nikhil" && gender.toLowerCase() === "male" && pin === "4444") {
+        greet = "Nikhil bro 4444 pin kyu dala yaha to kuch bhi nahi hai";
+    }
 
     const speak = new SpeechSynthesisUtterance(greet);
     speak.lang = "en-US";
@@ -36,8 +50,9 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
 
     window.speechSynthesis.speak(speak);
 
-    // index.html page
-    window.location.href = "index.html";
+    // Hide login, show main
+    document.querySelector(".parent-login").style.display = "none";
+    document.querySelector(".container").style.display = "flex";
 });
 
 

@@ -11,6 +11,27 @@
 </head>
 
 <body>
+    <div class="parent-login"  id="loginSection">
+        <div class="login-wrapper">
+            <img src="bank_logo.png" class="logo" alt="Bank Logo">
+            <h2>Welcome to <span style="color:#0077cc;">Infinity Bank</span></h2>
+
+            <form id="loginForm">
+                <input type="text" id="username" placeholder="Enter your name" required>
+
+                <select id="gender" required>
+                    <option value="">Select Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+
+                <input type="password" id="pin" placeholder="Enter 4-digit UPI PIN" maxlength="4" required>
+
+                <button type="submit" id="loginBtn">Login</button>
+            </form>
+        </div>
+    </div>
+
     <div class="buttons">
         <button id="homeBtn">Home</button>
         <button id="dipositeBtn">Deposite</button>
@@ -25,16 +46,12 @@
 
     <div class="container">
 
-
-
         <div class="child-container">
             <div id="home">
-
 
                 <div class="hero">
                     <h1>Your Trusted Financial Partner</h1>
                     <p>Secure. Fast. Reliable.</p>
-
                 </div>
 
                 <div class="features">
@@ -162,7 +179,7 @@
             </div>
 
         </div>
-      
+
     </div>
     <div id="customAlert" class="hidden">
         <div class="alert-box">
@@ -175,7 +192,7 @@
     <script src="script.js"></script>
     <script src="watch.js"></script>
     <script src="ac_balence.js"></script>
-    <!-- <script src="voice_login.js"></script> -->
+    <script src="voice_login.js"></script>
 
 
 </body>

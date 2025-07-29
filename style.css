@@ -1,593 +1,756 @@
-.hero {
-    text-align: center;
-    width: 100%;
-    background-color: #e3f2fd;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
-
-.hero h1 {
-    font-size: 2.2rem;
-    color: #0047ab;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-}
-
-.features {
-    display: flex;
-    justify-content: space-around;
-    padding: 2rem 0rem;
-    width: 100% !important;
-    background-color: rgb(255, 0, 0);
-}
-
-.feature-box {
-    width: 30%;
-    background: #f0f0f0;
-    padding: 20px 0px;
-    border-radius: 10px;
-    text-align: center;
-}
-
-footer {
-    background-color: #0047ab;
-    color: white;
-    text-align: center;
-    padding: 1rem 0px;
-    width: 100%;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-}
-
-
-
-body {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(to right, #1d4286, #3368c4, #00c6ff);
-}
-
-.container {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    backdrop-filter: blur(5px);
-}
-
-.child-container {
-    width: 90%;
-    height: 75vh;
-    margin-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(255, 255, 255, 0.09);
-    border-radius: 10px;
-}
-
-.buttons {
-    width: 100%;
-    padding: 30px 10px;
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    background-color: rgba(0, 0, 255, 0.191);
-}
-
-.buttons button {
-    padding: 7px 10px;
-    font-weight: bold;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-}
-
-#home {
-    display: flex;
-}
-
-.buttons button:hover {
-    background-color: rgb(255, 157, 0);
-    color: white;
-    box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.358);
-}
-
-.child-container>div {
-    display: none;
-    width: 80%;
-    height: 60vh;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.recipt-div {
-    width: 95%;
-    text-align: left;
-}
-
-.recipt-div button {
-    padding: 6px 15px;
-    font-size: 0.9rem;
-    font-weight: bold;
-    border: none;
-    background-color: #ff00b3;
-    color: white;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.recipt-div button:hover {
-    background-color: #ff52cb;
-}
-
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="number"]:focus {
-    outline: none;
-    border-color: #0088ff;
-    box-shadow: 0 0 5px rgba(0, 136, 255, 0.5);
-}
-
-form {
-    padding: 20px 60px;
-    padding-bottom: 1px;
-    border-radius: 15px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    width: 65%;
-    background-color: #0088ff11;
-}
-
-h2 {
-    margin-bottom: 20px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-}
-
-#closeBtn {
-    background: linear-gradient(to top, rgb(255, 0, 225), rgb(255, 39, 39));
-    text-shadow: 2px 0px 5px rgba(0, 0, 0, 0.6);
-    padding: 6px 11px;
-    color: white;
-    font-size: 18px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#closeBtn:hover {
-    background: linear-gradient(to top, rgb(255, 39, 39), rgb(255, 0, 225));
-    font-size: 18.5px;
-}
-
-#submit {
-    background: linear-gradient(to top, rgb(225, 255, 0), rgb(47, 183, 1));
-    padding: 6px 11px;
-    color: white;
-    font-size: 18px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 30px;
-}
-
-#submit:hover {
-    background: linear-gradient(to top, rgb(255, 248, 39), rgb(51, 255, 0));
-    /* font-size: 18.5px; */
-    text-shadow: 2px 0px 5px rgba(0, 0, 0, 0.6);
-    /* color: rgba(157, 255, 157, 0.841); */
-}
-
-#showRecipt {
-    display: none;
-    position: absolute;
-    display: none;
-    width: 100%;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    background: linear-gradient(to right, #1d4286, #3368c4, #00c6ff);
-    color: black;
-    z-index: 100;
-    justify-content: center;
-    align-items: center;
-}
-
-#showRecipt button {
-    position: inherit;
-    left: 40px;
-    top: 30px;
-}
-
-table {
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    color: #222;
-    font-weight: 500;
-    border-spacing: 0 5px;
-    border-collapse: separate;
-    width: 100%;
-}
-
-input {
-    padding: 5px;
-    font-size: 1rem;
-    width: 100%;
-}
-
-#AmountTransfer {
-    width: 70% !important;
-}
-
-label {
-    font-weight: bold;
-    color: #ffffff;
-    /* Pure black */
-}
-
-p {
-    display: block;
-}
-
-#showDisplay {
-    background-color: white;
-    padding: 50px 100px;
-    border-radius: 10px;
-    line-height: 1.4;
-    font-size: 1.1rem;
-}
-
-#historyShow {
-    background-color: rgba(57, 140, 255, 0.087);
-    width: 85%;
-    height: 95%;
-}
-
-#historyShow div,
-#historyShow {
-    border-radius: 10px;
-}
-
-#history-container {
-    width: 60%;
-    background-color: rgb(255, 255, 255);
-    padding: 20px 10px;
-    overflow-y: auto;
-    display: flex;
-    justify-content: space-evenly;
-    gap: 20px;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 10px auto;
-}
-
-/* Scroll disable + scrollbar hide */
-#history-container {
-    overflow: scroll;
-    scrollbar-width: none;
-    /* Firefox */
-    -ms-overflow-style: none;
-    /* IE 10+ */
-}
-
-#history-container::-webkit-scrollbar {
-    display: none;
-    /* Chrome, Safari, Edge */
-}
-
-.card {
-    background-color: rgba(0, 4, 130, 0.052);
-    color: rgb(0, 0, 0);
-    padding: 5px 20px;
-    display: flex;
-    gap: 5px;
-    flex-direction: column;
-    border: black 2px dotted;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4) !important;
-}
-
-.card:hover {
-    transform: scale(1.007);
-    border: black 2px dashed;
-    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.4) !important;
-}
-
-#balanceCard {
-    background-color: rgb(255, 255, 255);
-    width: 50%;
-    height: 80%;
-    display: flex;
-    gap: 15px;
-    border-radius: 10px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-}
-
-#pinBoxContainer {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 10px;
-}
-
-.pinBox {
-    width: 40px;
-    height: 40px;
-    font-size: 24px;
-    text-align: center;
-    border: 1px solid #999;
-    border-radius: 5px;
-}
-
-#BalanceLabel {
-    color: black;
-}
-
-#checkBalanceBtn {
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-#checkBalanceBtn:hover {
-    background-color: #45a049;
-    transform: scale(1.02);
-}
-
-#checkBalanceBtn:active {
-    transform: scale(0.98);
-}
-
-#showBalance {
-    height: 20px;
-    font-size: 1.1rem;
-}
-
-#customAlert {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-}
-
-.alert-box {
-    background: white;
-    padding: 25px 50px;
-    border-radius: 12px;
-    box-shadow: 0 0 20px rgb(64, 255, 0);
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-align: center;
-    animation: pop 0.3s ease;
-}
-
-.alert-box button {
-    margin-top: 35px;
-    font-size: 1rem;
-    padding: 8px 20px;
-    background: rgb(255, 213, 0);
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-.alert-box button:hover {
-    background: rgb(210, 175, 0);
-}
-
-#customAlert.hidden {
-    display: none;
-}
-
-@keyframes pop {
-    from {
-        transform: scale(0.7);
-        opacity: 0;
-    }
-
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-/* /////////////////////////////////////////////////////////////////////////////////////////////// */
-
-body {
-    flex-direction: column;
-}
-
-@media (max-width: 600px) {
-
-    body {
-        margin: 0 !important;
-        padding: 0 !important;
-        flex-direction: column;
-    }
-
-    .container {
-        height: auto !important;
-        margin: 0px !important;
-        padding: 0 !important;
-    }
-
-    .child-container {
-        width: 100% !important;
-        margin-top: 0px !important;
-        border-radius: 0px !important;
-    }
-
-    .buttons {
-        padding: 10px 0px !important;
-        gap: 5px;
-        position: relative;
-        top: -50px;
-        left: 0px;
-        flex-wrap: wrap;
-    }
-
-    .buttons button {
-        padding: 5px 5px !important;
-        font-size: 0.9rem;
-    }
-
-    .child-container>div {
-        width: 100% !important;
-    }
-
-    .recipt-div {
-        width: 90%;
-        margin-bottom: 5%;
-        margin-top: -25%;
-    }
-
-    .recipt-div button {
-        padding: 10px 20px;
-        font-size: 1rem;
-    }
-
-    .hero {
-        padding-top: 10px;
-        width: 100%;
-        border-radius: 0% !important;
-    }
-
-    .hero h1 {
-        font-size: 1.3rem !important;
-    }
-
-    .hero p {
-        font-size: 1rem !important;
-        margin: 1rem 0;
-    }
-
-    .features {
-        flex-wrap: wrap;
-        gap: 15px;
-        padding: 1rem 0rem;
-        width: 100% !important;
-    }
-
-    .feature-box {
-        width: 80%;
-        padding: 20px 0px;
-    }
-
-    footer {
-        border-radius: 0% !important;
-    }
-
-    form {
-        width: 100%;
-        padding: 40px 0px !important;
-        border-radius: 0% !important;
-        flex-direction: column;
-    }
-
-    #submit {
-        background: linear-gradient(to top, rgb(255, 238, 0), rgb(47, 183, 1));
-    }
-
-    label {
-        padding-left: 5px;
-    }
-
-    input {
-        width: 90% !important;
-        padding: 0px !important;
-        padding-left: 5px !important;
-        font-size: 1.05rem;
-    }
-
-
-    #balanceCard {
-        width: 80% !important;
-        height: 60% !important;
-    }
-
-    .pinBox {
-        width: 40px !important;
-    }
-
-    #BalanceLabel {
-        color: black;
-    }
-
-    #showBalance {
-        height: 20px;
-        font-size: 1.1rem;
-    }
-
-
-    .alert-box button {
-        margin-top: 20px !important;
-    }
-
-    #AmountTransfer {
-        width: 100% !important;
-    }
-
-
-
-
-    #showDisplay {
-        padding: 50px 15px !important;
-        border-radius: 0px !important;
-        width: 100% !important;
-        line-height: 1.2 !important;
-        font-size: 1.1rem;
-    }
-
-    #historyShow {
-        background-color: rgb(255, 255, 255);
-        width: 100%; 
-        height: 100%;
-        margin: 0 !important;
-        border-radius: 0% !important;
-    }
-
-    #historyShow div {
-        border-radius: 10px;
-    }
-
-    #history-container {
-       width: 97% !important; 
-        padding: 10px 0px !important;
-        margin: 10px 0px !important;
-    }
-
-    .card {
-        gap: 1px !important;
-        margin-left: 3px;
-        margin-right: 3px;
-        line-height: 1.5 !important; 
-        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2) !important;
-    }
-    .card p{
-        margin: 0 !important;
-    }
-}
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+
+ .parent-login {
+     background-color: rgb(0, 255, 208);
+     position: fixed;
+     left: 0;
+     top: 0;
+     width: 100%;
+     height: 100%;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+     z-index: 9999;
+ }
+
+ #loginForm {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 70%;
+ }
+
+ .login-wrapper {
+     width: 60%;
+     background-color: white;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+     padding: 50px 0px !important;
+     text-align: center;
+     border-radius: 10px;
+ }
+
+ .logo {
+     width: 180px;
+     height: 110px;
+     border-radius: 10px;
+     margin-bottom: 40px;
+     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+     transition: all 0.5s ease-in-out;
+     animation: float 3s ease-in-out infinite, glow 2s ease-in-out infinite;
+ }
+
+ @keyframes glow {
+
+     0%,
+     100% {
+         box-shadow:
+             0 0 10px #ffd700,
+             0 0 20px #ffd700,
+             0 0 30px #ffdf00,
+             0 0 40px #ffcc00,
+             0 0 50px #ffb700;
+     }
+
+     50% {
+         box-shadow:
+             0 0 5px #ffd700,
+             0 0 10px #ffd700,
+             0 0 15px #ffdf00,
+             0 0 20px #ffcc00,
+             0 0 25px #ffb700;
+     }
+ }
+
+ @keyframes float {
+     0% {
+         transform: translateY(0);
+     }
+
+     50% {
+         transform: translateY(-10px);
+     }
+
+     100% {
+         transform: translateY(0);
+     }
+ }
+
+
+ #loginForm input,
+ #loginForm select,
+ #loginForm button {
+     width: 90%;
+     padding: 12px !important;
+     margin: 10px 0 !important;
+     font-size: 16px !important;
+     border-radius: 8px !important;
+     border: 1px solid #ccc !important;
+     box-sizing: border-box !important;
+ }
+
+ #loginForm button {
+     background-color: #0077cc;
+     color: white;
+     border: none;
+     cursor: pointer;
+     font-weight: bold;
+ }
+
+ #loginForm button:hover {
+     background-color: #005fa3;
+ }
+
+
+ @media (max-width: 600px) {
+     .parent-login {
+         background-color: rgb(255, 102, 127);
+     }
+
+     .login-wrapper {
+         width: 100%;
+         border-radius: 0px !important;
+     }
+
+     @keyframes float {
+         0% {
+             transform: translateY(0);
+         }
+
+         50% {
+             transform: translateY(-15px);
+         }
+
+         100% {
+             transform: translateY(0);
+         }
+     }
+
+     #loginForm {
+         width: 100% !important;
+     }
+
+     #loginForm input,
+     #loginForm select,
+     #loginForm button {
+         width: 80% !important;
+     }
+ }
+
+
+
+
+
+
+
+
+
+
+ .hero {
+     text-align: center;
+     width: 100%;
+     background-color: #e3f2fd;
+     border-top-left-radius: 10px;
+     border-top-right-radius: 10px;
+ }
+
+ .hero h1 {
+     font-size: 2.2rem;
+     color: #0047ab;
+ }
+
+ .hero p {
+     font-size: 1.2rem;
+     margin-bottom: 1rem;
+ }
+
+ .features {
+     display: flex;
+     justify-content: space-around;
+     padding: 2rem 0rem;
+     width: 100% !important;
+     background-color: white;
+ }
+
+ .feature-box {
+     width: 30%;
+     background: #f0f0f0;
+     padding: 20px 0px;
+     border-radius: 10px;
+     text-align: center;
+ }
+
+ footer {
+     background-color: #0047ab;
+     color: white;
+     text-align: center;
+     padding: 1rem 0px;
+     width: 100%;
+     border-bottom-left-radius: 10px;
+     border-bottom-right-radius: 10px;
+ }
+
+
+
+ body {
+     height: 100vh;
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background: linear-gradient(to right, #1d4286, #3368c4, #00c6ff);
+ }
+
+ .container {
+     height: 100vh;
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     backdrop-filter: blur(5px);
+ }
+
+ .child-container {
+     width: 90%;
+     height: 75vh;
+     margin-top: 20px;
+     display: flex;
+     flex-wrap: wrap;
+     align-items: center;
+     justify-content: center;
+     background-color: rgba(255, 255, 255, 0.09);
+     border-radius: 10px;
+ }
+
+ .buttons {
+     width: 100%;
+     padding: 30px 10px;
+     display: flex;
+     justify-content: center;
+     gap: 40px;
+     background-color: rgba(0, 0, 255, 0.191);
+ }
+
+ .buttons button {
+     padding: 7px 10px;
+     font-weight: bold;
+     border: none;
+     border-radius: 3px;
+     cursor: pointer;
+ }
+
+ #home {
+     display: flex;
+ }
+
+ .buttons button:hover {
+     background-color: rgb(255, 157, 0);
+     color: white;
+     box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.358);
+ }
+
+ .child-container>div {
+     display: none;
+     width: 80%;
+     height: 60vh;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .recipt-div {
+     width: 95%;
+     text-align: left;
+ }
+
+ .recipt-div button {
+     padding: 6px 15px;
+     font-size: 0.9rem;
+     font-weight: bold;
+     border: none;
+     background-color: #ff00b3;
+     color: white;
+     cursor: pointer;
+     border-radius: 5px;
+ }
+
+ .recipt-div button:hover {
+     background-color: #ff52cb;
+ }
+
+ input[type="text"]:focus,
+ input[type="email"]:focus,
+ input[type="number"]:focus {
+     outline: none;
+     border-color: #0088ff;
+     box-shadow: 0 0 5px rgba(0, 136, 255, 0.5);
+ }
+
+ form {
+     padding: 20px 60px;
+     padding-bottom: 1px;
+     border-radius: 15px;
+     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+     text-align: left;
+     display: flex;
+     flex-direction: column;
+     width: 65%;
+     background-color: #0088ff11;
+ }
+
+ h2 {
+     margin-bottom: 20px;
+     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+ }
+
+ #closeBtn {
+     background: linear-gradient(to top, rgb(255, 0, 225), rgb(255, 39, 39));
+     text-shadow: 2px 0px 5px rgba(0, 0, 0, 0.6);
+     padding: 6px 11px;
+     color: white;
+     font-size: 18px;
+     border: none;
+     border-radius: 5px;
+     cursor: pointer;
+ }
+
+ #closeBtn:hover {
+     background: linear-gradient(to top, rgb(255, 39, 39), rgb(255, 0, 225));
+     font-size: 18.5px;
+ }
+
+ #submit {
+     background: linear-gradient(to top, rgb(225, 255, 0), rgb(47, 183, 1));
+     padding: 6px 11px;
+     color: white;
+     font-size: 18px;
+     border: none;
+     border-radius: 5px;
+     cursor: pointer;
+     margin-top: 30px;
+ }
+
+ #submit:hover {
+     background: linear-gradient(to top, rgb(255, 248, 39), rgb(51, 255, 0));
+     /* font-size: 18.5px; */
+     text-shadow: 2px 0px 5px rgba(0, 0, 0, 0.6);
+     /* color: rgba(157, 255, 157, 0.841); */
+ }
+
+ #showRecipt {
+     display: none;
+     position: absolute;
+     display: none;
+     width: 100%;
+     height: 100vh;
+     top: 0;
+     left: 0;
+     background: linear-gradient(to right, #1d4286, #3368c4, #00c6ff);
+     color: black;
+     z-index: 100;
+     justify-content: center;
+     align-items: center;
+ }
+
+ #showRecipt button {
+     position: inherit;
+     left: 40px;
+     top: 30px;
+ }
+
+ table {
+     font-family: Arial, sans-serif;
+     font-size: 16px;
+     color: #222;
+     font-weight: 500;
+     border-spacing: 0 5px;
+     border-collapse: separate;
+     width: 100%;
+ }
+
+ input {
+     padding: 5px;
+     font-size: 1rem;
+     width: 100%;
+ }
+
+ #AmountTransfer {
+     width: 70% !important;
+ }
+
+ label {
+     font-weight: bold;
+     color: #ffffff;
+     /* Pure black */
+ }
+
+ p {
+     display: block;
+ }
+
+ #showDisplay {
+     background-color: white;
+     padding: 50px 100px;
+     border-radius: 10px;
+     line-height: 1.4;
+     font-size: 1.1rem;
+ }
+
+ #historyShow {
+     background-color: rgba(57, 140, 255, 0.087);
+     width: 85%;
+     height: 95%;
+ }
+
+ #historyShow div,
+ #historyShow {
+     border-radius: 10px;
+ }
+
+ #history-container {
+     width: 60%;
+     background-color: rgb(255, 255, 255);
+     padding: 20px 10px;
+     overflow-y: auto;
+     display: flex;
+     justify-content: space-evenly;
+     gap: 20px;
+     align-items: center;
+     flex-wrap: wrap;
+     margin: 10px auto;
+ }
+
+ /* Scroll disable + scrollbar hide */
+ #history-container {
+     overflow: scroll;
+     scrollbar-width: none;
+     /* Firefox */
+     -ms-overflow-style: none;
+     /* IE 10+ */
+ }
+
+ #history-container::-webkit-scrollbar {
+     display: none;
+     /* Chrome, Safari, Edge */
+ }
+
+ .card {
+     background-color: rgba(0, 4, 130, 0.052);
+     color: rgb(0, 0, 0);
+     padding: 5px 20px;
+     display: flex;
+     gap: 5px;
+     flex-direction: column;
+     border: black 2px dotted;
+     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4) !important;
+ }
+
+ .card:hover {
+     transform: scale(1.007);
+     border: black 2px dashed;
+     box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.4) !important;
+ }
+
+ #balanceCard {
+     background-color: rgb(255, 255, 255);
+     width: 50%;
+     height: 80%;
+     display: flex;
+     gap: 15px;
+     border-radius: 10px;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+
+ }
+
+ #pinBoxContainer {
+     display: flex;
+     gap: 10px;
+     margin-bottom: 10px;
+ }
+
+ .pinBox {
+     width: 40px;
+     height: 40px;
+     font-size: 24px;
+     text-align: center;
+     border: 1px solid #999;
+     border-radius: 5px;
+ }
+
+ #BalanceLabel {
+     color: black;
+ }
+
+ #checkBalanceBtn {
+     padding: 10px 20px;
+     background-color: #4CAF50;
+     color: white;
+     border: none;
+     border-radius: 8px;
+     font-size: 16px;
+     cursor: pointer;
+     transition: background-color 0.3s ease, transform 0.2s ease;
+ }
+
+ #checkBalanceBtn:hover {
+     background-color: #45a049;
+     transform: scale(1.02);
+ }
+
+ #checkBalanceBtn:active {
+     transform: scale(0.98);
+ }
+
+ #showBalance {
+     height: 20px;
+     font-size: 1.1rem;
+ }
+
+ #customAlert {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: rgba(0, 0, 0, 0.5);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     z-index: 9999;
+ }
+
+ .alert-box {
+     background: white;
+     padding: 25px 50px;
+     border-radius: 12px;
+     box-shadow: 0 0 20px rgb(64, 255, 0);
+     font-size: 1.2rem;
+     font-weight: bold;
+     text-align: center;
+     animation: pop 0.3s ease;
+ }
+
+ .alert-box button {
+     margin-top: 35px;
+     font-size: 1rem;
+     padding: 8px 20px;
+     background: rgb(255, 213, 0);
+     border: none;
+     border-radius: 6px;
+     cursor: pointer;
+ }
+
+ .alert-box button:hover {
+     background: rgb(210, 175, 0);
+ }
+
+ #customAlert.hidden {
+     display: none;
+ }
+
+ @keyframes pop {
+     from {
+         transform: scale(0.7);
+         opacity: 0;
+     }
+
+     to {
+         transform: scale(1);
+         opacity: 1;
+     }
+ }
+
+ /* /////////////////////////////////////////////////////////////////////////////////////////////// */
+
+ body {
+     flex-direction: column;
+ }
+
+ @media (max-width: 600px) {
+
+     body {
+         margin: 0 !important;
+         padding: 0 !important;
+         flex-direction: column;
+     }
+
+     .container {
+         height: auto !important;
+         margin: 0px !important;
+         padding: 0 !important;
+     }
+
+     .child-container {
+         width: 100% !important;
+         margin-top: 0px !important;
+         border-radius: 0px !important;
+     }
+
+     .buttons {
+         padding: 10px 0px !important;
+         gap: 5px;
+         position: relative;
+         top: -50px;
+         left: 0px;
+         flex-wrap: wrap;
+     }
+
+     .buttons button {
+         padding: 5px 5px !important;
+         font-size: 0.9rem;
+     }
+
+     .child-container>div {
+         width: 100% !important;
+         margin-top: -20% !important;
+     }
+
+     .recipt-div {
+         width: 90%;
+         margin-bottom: 5%;
+         margin-top: -25%;
+     }
+
+     .recipt-div button {
+         padding: 8px 20px;
+         font-size: 1rem;
+     }
+
+     .hero {
+         padding-top: 10px;
+         width: 100%;
+         border-radius: 0% !important;
+     }
+
+     .hero h1 {
+         font-size: 1.3rem !important;
+     }
+
+     .hero p {
+         font-size: 1rem !important;
+         margin: 1rem 0;
+     }
+
+     .features {
+         flex-wrap: wrap;
+         gap: 15px;
+         padding: 1rem 0rem;
+         width: 100% !important;
+     }
+
+     .feature-box {
+         width: 80%;
+         padding: 20px 0px;
+     }
+
+     footer {
+         border-radius: 0% !important;
+     }
+
+     form {
+         width: 100%;
+         padding: 40px 0px !important;
+         border-radius: 0% !important;
+         flex-direction: column;
+     }
+
+     #submit {
+         background: linear-gradient(to top, rgb(255, 238, 0), rgb(47, 183, 1));
+     }
+
+     label {
+         padding-left: 5px;
+     }
+
+     input {
+         width: 90% !important;
+         padding: 0px !important;
+         padding-left: 5px !important;
+         font-size: 1.05rem;
+     }
+
+
+     #balanceCard {
+         width: 80% !important;
+         height: 60% !important;
+     }
+
+     .pinBox {
+         width: 40px !important;
+         display: flex !important;
+         justify-content: center !important;
+         align-items: center !important;
+     }
+
+     #BalanceLabel {
+         color: black;
+     }
+
+     #showBalance {
+         height: 20px;
+         font-size: 1.1rem;
+     }
+
+
+     .alert-box button {
+         margin-top: 20px !important;
+     }
+
+     #AmountTransfer {
+         width: 100% !important;
+     }
+
+
+
+
+     #showDisplay {
+         padding: 50px 15px !important;
+         border-radius: 0px !important;
+         width: 100% !important;
+         line-height: 1.2 !important;
+         font-size: 1.1rem;
+     }
+
+     #historyShow {
+         background-color: rgb(255, 255, 255);
+         width: 100%;
+         height: 100%;
+         margin: 0 !important;
+         border-radius: 0% !important;
+     }
+
+     #historyShow div {
+         border-radius: 10px;
+     }
+
+     #history-container {
+         width: 97% !important;
+         padding: 10px 0px !important;
+         margin: 10px 0px !important;
+     }
+
+     .card {
+         gap: 1px !important;
+         margin-left: 3px;
+         margin-right: 3px;
+         line-height: 1.5 !important;
+         box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2) !important;
+     }
+
+     .card p {
+         margin: 0 !important;
+     }
+ }
