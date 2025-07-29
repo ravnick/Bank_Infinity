@@ -1,5 +1,5 @@
 
-const pin = document.getElementById("pin").value.trim();
+// const pin = document.getElementById("pin").value.trim();
 let accountBalance = 10000; // Example balance
 
 const pinBoxes = document.querySelectorAll(".pinBox");

@@ -4,7 +4,7 @@ let voices = [];
 window.speechSynthesis.onvoiceschanged = () => {
     voices = window.speechSynthesis.getVoices();
 };
-let correctUPIPin = "";
+// let correctUPIPin = "";
 
 document.getElementById("loginForm").addEventListener("submit", function (e) {
     e.preventDefault();
@@ -17,7 +17,7 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
         showAlert("Please fill all fields correctly");
         return;
     }
-    correctUPIPin = pin; // ✅ UPI Pin yahin set karo   
+    // correctUPIPin = pin; // ✅ UPI Pin yahin set karo   
     // Voice Greeting
     let greet = gender === "female"
         ? `Welcome to Infinity Bank, Ms. ${name}`
@@ -26,7 +26,7 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
     const speak = new SpeechSynthesisUtterance(greet);
     speak.lang = "en-US";
     speak.pitch = 1;
-    speak.rate = 1;
+    speak.rate = 0.85;
     speak.volume = 1;
 
     // ✅ Always use female voice (regardless of user gender)
@@ -36,8 +36,8 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
 
     window.speechSynthesis.speak(speak);
 
-    // Hide login, show main
-    document.querySelector(".login-wrapper").style.display = "none";
+    // index.html page
+    window.location.href = "index.html";
 });
 
 
