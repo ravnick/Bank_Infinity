@@ -24,7 +24,7 @@ checkBalanceBtn.addEventListener("click", function () {
     });
 
     if (enteredPin === correctUPIPin) {
-        showBalanceDiv.innerHTML = `<b>Your Current Balance is: ₹${accountBalance}</b>`;
+        showBalanceDiv.innerHTML = `<b>Current Bank Balance is: ₹${accountBalance}</b>`;
     } else {
         showBalanceDiv.innerHTML = `<span style="color: red;">Incorrect UPI Pin!</span>`;
     }

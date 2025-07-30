@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bank Account</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"> -->
 
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"> -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="parent-login"  id="loginSection">
+    <div class="parent-login" id="loginSection" style="display: none;">
+
         <div class="login-wrapper">
             <img src="bank_logo.png" class="logo" alt="Bank Logo">
             <h2>Welcome to <span style="color:#0077cc;">Infinity Bank</span></h2>
@@ -34,11 +35,20 @@
 
     <div class="buttons">
         <button id="homeBtn">Home</button>
-        <button id="dipositeBtn">Deposite</button>
-        <button id="transferBtn">transfer</button>
+
+        <div class="dropdown" id="dropdownId">
+            <button class="dropbtn">Payments</button>
+            <div class="dropdown-content">
+                <a href="#" id="dropdownDepositeBtn">Deposite</a>
+                <a href="#" id="dropdownTransferBtn">Transfer</a>
+            </div>
+        </div>
+
         <button id="checkBalanceDivBtn">Check Balance</button>
         <button id="historyShowBtn">History</button>
+
     </div>
+
     <div id="showRecipt">
         <div id="showDisplay"></div><button onclick="back()" id="closeBtn" title="Back button">
             < Back </button>
@@ -75,38 +85,34 @@
             </div>
 
             <!-- diposite section -->
-            <div id="diposite" class="page">
+            <div id="diposite" class="page payments-align">
                 <div class="recipt-div">
                     <button id="TransactionRecipt" title="Show recipt" onclick="trans()">Recipt</button>
                 </div>
 
-                <form id="AmountDeposite">
-                    <table>
-                        <tr>
-                            <td><label for="userName">Enter Your Name:</label></td>
-                            <td><input type="text" name="name" id="userName" placeholder="Enter your name"
-                                    title="Your name">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><label for="accountNumber">Enter A/C Number:</label></td>
-                            <td><input type="number" name="acnumber" id="accountNumber"
-                                    placeholder="Enter your account number" title="A/C number"></td>
-                        </tr>
-                        <tr>
-                            <td><label for="ifscCode">IFSC Code:</label></td>
-                            <td><input type="text" id="ifscCode" placeholder="Enter your IFSC code" title="IFSC Code">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><label for="amount">Enter Amount:</label></td>
-                            <td><input type="number" id="amount" placeholder="Enter Amount" title="Enter  amount"></td>
-                        </tr>
-                        <tr>
-                            <td colspan="2" style="text-align: center;">
-                                <button id="submit">Submit</button>
-                            </td>
-                        </tr>
+                <form id="AmountDeposite" class="parent-line">
+
+                    <div class="form-line">
+                        <label for="userName">Enter Your Name:</label>
+                        <input type="text" name="name" id="userName" placeholder="Enter your name" title="Your name">
+                    </div>
+                    <div class="form-line">
+                        <label for="accountNumber">Enter A/C Number:</label>
+                        <input type="number" name="acnumber" id="accountNumber" placeholder="Enter your account number"
+                            title="A/C number">
+                    </div>
+                    <div class="form-line">
+                        <label for="ifscCode">IFSC Code:</label>
+                        <input type="text" id="ifscCode" placeholder="Enter your IFSC code" title="IFSC Code">
+                    </div>
+                    <div class="form-line">
+                        <label for="amount">Enter Amount:</label>
+                        <input type="number" id="amount" placeholder="Enter amount" title="Enter  amount">
+                    </div>
+
+                    <button id="submit">Submit</button>
+
+
                     </table>
                 </form>
             </div>
@@ -114,39 +120,39 @@
 
 
             <!-- Transfer Section  -->
-            <div id="transfer" class="page">
+            <div id="transfer" class="page payments-align">
                 <div class="recipt-div">
                     <button id="TransferRecipt" title="Show recipt" onclick="trans()">Recipt</button>
                 </div>
 
-                <form id="AmountTransfer">
-                    <table>
-                        <tr>
-                            <td><label for="senderAccount">Sender A/C Number:</label></td>
-                            <td><input type="number" name="senderAcc" id="senderAccount"
-                                    placeholder=" your account number" title="Sender A/C number"></td>
-                        </tr>
-                        <tr>
-                            <td><label for="receiverAccount">Receiver A/C Number:</label></td>
-                            <td><input type="number" name="receiverAcc" id="receiverAccount"
-                                    placeholder=" receiver's account number" title="Receiver A/C number"></td>
-                        </tr>
-                        <tr>
-                            <td><label for="receiverIFSC">Receiver IFSC Code:</label></td>
-                            <td><input type="text" id="receiverIFSC" placeholder=" receiver IFSC code"
-                                    title="Receiver IFSC Code"></td>
-                        </tr>
-                        <tr>
-                            <td><label for="transferAmount">Enter Amount:</label></td>
-                            <td><input type="number" id="transferAmount" placeholder=" amount"
-                                    title="Enter transfer amount"></td>
-                        </tr>
-                        <tr>
-                            <td colspan="2" style="text-align: center;">
-                                <button id="submit">Submit</button>
-                            </td>
-                        </tr>
-                    </table>
+                <form id="AmountTransfer" class="parent-line">
+
+                    <div class="form-line">
+                        <label for="senderAccount">Sender A/C Number:</label>
+                        <input type="number" name="senderAcc" id="senderAccount" placeholder="Your account number"
+                            title="Sender A/C number">
+                    </div>
+
+                    <div class="form-line">
+                        <label for="receiverAccount">Receiver A/C Number:</label>
+                        <input type="number" name="receiverAcc" id="receiverAccount"
+                            placeholder="Receiver's account number" title="Receiver A/C number">
+                    </div>
+
+                    <div class="form-line">
+                        <label for="receiverIFSC">Receiver IFSC Code:</label>
+                        <input type="text" id="receiverIFSC" placeholder="Receiver IFSC code"
+                            title="Receiver IFSC Code">
+                    </div>
+
+                    <div class="form-line">
+                        <label for="transferAmount">Enter Amount:</label>
+                        <input type="number" id="transferAmount" placeholder="Enter amount"
+                            title="Enter transfer amount">
+                    </div>
+
+                    <button id="submit">Submit</button>
+
                 </form>
             </div>
 
@@ -165,8 +171,6 @@
 
                     <button id="checkBalanceBtn">Check Balance</button>
                     <div id="showBalance"></div>
-
-
 
                 </div>
             </div>
@@ -192,22 +196,11 @@
     <script src="script.js"></script>
     <script src="watch.js"></script>
     <script src="ac_balence.js"></script>
-    <script src="voice_login.js"></script>
-
+    <script src="voice_login.js"></script> 
+    <script src="dropDown.js">
+    
+    </script>
 
 </body>
 
 </html>
-
-<!-- const sections = document.querySelectorAll(".child-container > div");
-const buttons = document.querySelectorAll(".buttons > button");
-
-buttons.forEach(btn => {
-    btn.addEventListener("click", () => {
-        const targetId = btn.id.replace("Btn", "");
-
-        sections.forEach(section => {
-            section.style.display = (section.id === targetId) ? "flex" : "none";
-        });
-    });
-}); -->

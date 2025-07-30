@@ -166,7 +166,6 @@ function hideAlert() {
 
 
 
-
 // const home = document.getElementById("home");
 // const diposite = document.getElementById("diposite");
 // const transfer = document.getElementById("transfer");
